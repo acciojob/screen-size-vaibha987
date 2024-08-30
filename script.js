@@ -1,7 +1,7 @@
 //your JS code here. If required.
-const heading=document.getElementsById("sizeInfo").querySelector("h1")
+const heading=document.getElementById("sizeInfo").querySelector("h1")
 function updateSize(){
-heading.innerText=`Width: ${window.innerWidth} and Height: ${window.innerHeight}`
+heading.innerText=`Width:${window.innerWidth} and Height: ${window.innerHeight}`
 }
 updateSize()
 // Update the size whenever the window is resized
