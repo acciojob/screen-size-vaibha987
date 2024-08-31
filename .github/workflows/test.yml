@@ -6,6 +6,4 @@ on:
 jobs:
   calling-acciojob-main-action:
     uses: acciojob/acciojob-tests-action/.github/workflows/main-action.yml@main
-    with:
-        node-version: '14.x' # or '16.x'
     secrets: inherit
