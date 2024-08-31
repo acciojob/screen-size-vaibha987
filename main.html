@@ -12,28 +12,15 @@
 	<h1></h1>
 	</div>
     <script type="text/javascript">
-		//your JS code here. If required.
-		// Get the div element with id 'sizeInfo'
-let sizeInfo = document.getElementById('sizeInfo');
-
-// Create a function to update the size info
-function updateSizeInfo() {
-    // Get the window width and height
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-
-    // Update the sizeInfo div
-    sizeInfo.innerHTML = `<h1>Width: ${width} and Height: ${height}</h1>`;
+	// your code here
+const heading=document.getElementById("sizeInfo").querySelector("h1")
+function updateSize(){
+heading.innerText=`Width:${window.innerWidth} and Height: ${window.innerHeight}`
 }
-
-// Call the function once to set the initial size info
-updateSizeInfo();
-
-// Update the size info whenever the window is resized
-window.onresize = updateSizeInfo;
-
-
-
+// Update the size whenever the window is resized
+window.addEventListener('resize', updateSize);
+updateSize()
+			
 </script>
 
 </body>
