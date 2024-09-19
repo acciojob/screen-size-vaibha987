@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Size</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<div id="sizeInfo">
-	<h1></h1>
-	</div>
-    <script type="text/javascript">
-	// your code here
-const heading=document.getElementById("sizeInfo").querySelector("h1")
-function updateSize(){
-heading.innerText=`Width:${window.innerWidth} and Height: ${window.innerHeight}`
-}
-// Update the size whenever the window is resized
-window.addEventListener('resize', updateSize);
-updateSize()
-			
-</script>
+    <div id="sizeInfo">
+        <h1 id="dimensions"></h1>
+    </div>
 
+    <script>
+        function updateWindowSize() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const sizeText = `Width: ${width} and Height: ${height}`;
+            document.getElementById('dimensions').textContent = sizeText;
+        }
+
+        // Call the function initially to display the size when the page loads
+        updateWindowSize();
+
+        // Listen for window resize events
+        window.addEventListener('resize', updateWindowSize);
+    </script>
 </body>
-
 </html>
